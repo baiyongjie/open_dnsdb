@@ -59,7 +59,7 @@ For OpenDnsdb operations, a DNS configuration file is generated and synchronized
 
 
 ## 安装手册
-* 环境 Python:3.6.8  pip:19.0.3
+* 环境 Python:3.6.8  pip:19.0.3 sqlite3(安装pytho前要安装sqlite,否则会找不到模快)
 
 * 支持的浏览器: chrome, Firefox
 
@@ -77,9 +77,11 @@ For OpenDnsdb operations, a DNS configuration file is generated and synchronized
 
 * 切换到项目目录: `cd open_dnsdb `
 
+
 * 初始化项目python环境: 
 
     ```bash
+    $ yum -y install sqlite-devel
     $ python tools/install_venv.py -p /usr/bin/python3.6
     # 命令行参数:
     # 	-p 使用的python解释器版本, 确保使用virtualenv创建虚拟环境是python3.6+
